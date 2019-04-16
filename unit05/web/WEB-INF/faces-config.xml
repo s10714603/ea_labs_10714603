@@ -1,0 +1,48 @@
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <navigation-rule>
+         <!-- Source Page-->
+         <from-view-id>index.xhtml</from-view-id>
+         
+         <!-- first navigation case -->
+         <navigation-case>
+                 <!-- Specify the action reference that the navigation case refer to. 
+                   If you omit the from-action, 
+                   the action attribute of the UIComponent that triggers the action 
+                   will be considered.  -->
+                 
+                 <from-action>#{unitFive.pageNumber}</from-action>
+                 
+                 <!-- The outcome value to be compared with 
+                   1) the corresponding form-action outcome or 
+                   2) the action attribute of a UIComponent with navigation support 
+                   when the from-action is omited  -->
+                 <from-outcome>page1</from-outcome>
+                 
+                 <!-- Conditional Navigation  -->
+                 <if></if>
+                 
+                 <!-- The target page -->
+                 <to-view-id>page1.xhtml</to-view-id>
+         </navigation-case>
+     
+         <!-- Navigate to different pages with other navigation cases -->
+         <navigation-case>
+                 <!-- Navigation Case Definition -->
+                 <from-action>#{unitFive.pageNumber}</from-action>
+                 <from-outcome>page2</from-outcome>
+                 <if></if>
+                 <to-view-id>page2.xhtml</to-view-id>
+         </navigation-case>
+         
+         <navigation-case>
+                 <!-- Navigation Case Definition -->
+                 <from-action>#{unitFive.pageNumber}</from-action>
+                 <from-outcome>page3</from-outcome>
+                 <if></if>
+                 <to-view-id>page3.xhtml</to-view-id>
+         </navigation-case>
+    </navigation-rule>
+</faces-config>
