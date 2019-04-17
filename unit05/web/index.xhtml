@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>Unit05 Assignment</title>
+        <f:metadata>
+        <!--Put the request parameters to bean properties-->
+        <f:viewParam name="PageNumber" value="#{unitFive.pageNumber}"/>
+        </f:metadata>
+    </h:head>
+    <h:body>
+        
+        <h:form>
+            <h:link outcome="index" value="Item1"><f:param name="PageNumber" value="1"/></h:link>
+            &nbsp;
+            <h:link outcome="index" value="Item2"><f:param name="PageNumber" value="2"/></h:link>
+            &nbsp;
+            <h:link outcome="index" value="Item3"><f:param name="PageNumber" value="3"/></h:link>
+            <br/><br/>
+            <h:commandButton action="#{unitFive.submit()}" type="submit" value="Show Info"></h:commandButton>
+        </h:form><br />
+        
+        <c:if test="${unitFive.pageNumber == 0}"></c:if>
+        
+        <c:if test="${unitFive.pageNumber != 0}">
+            <h:graphicImage width="25%" library="img" name="#{unitFive.pageNumber}.jpg"></h:graphicImage>
+        </c:if>
+        
+    </h:body>
+</html>
+
+    <!-- 
+        備份 
+
+        <h:link outcome="page1">Item 1</h:link>
+        <h:link outcome="page2">Item 2</h:link>
+        <h:link outcome="page3">Item 3</h:link>
+
+        <h:form>
+            
+            <a href="連結網址">Item 1</a>&nbsp;<a href="連結網址">Item 2</a>&nbsp;<a href="連結網址">Item 3</a> 
+            
+            <h:commandLink action="#{unitFive.pageNumber}" value="Item 1"/>
+            &nbsp;
+            <h:commandLink action="#{unitFive.pageNumber}" value="Item 2"/>
+            &nbsp;
+            <h:commandLink action="#{unitFive.pageNumber}" value="Item 3"/>
+
+            <h:commandButton value="Show Info" type="submit" action="#{unit05.submit}">
+                <f:param name = "pageNum" value = "#{unit05.PageNumber}"/>
+            </h:commandButton>
+            
+            <p/>
+            
+            <h:graphicImage library="img" name="#{param['PageNumber']}.jpg"/>
+            <h:graphicImage value="#{resource['img:1.jpg']}"/> 
+            <h:graphicImage value="#{resource['PageNumber']}.jpg"/> 
+            
+            <c:if test="#{param['PageNumber']!=null}">
+                <h:graphicImage library="img" name="#{param['PageNumber']}.jpg"/>
+            </c:if>
+        
+        </h:form>
+
+    -->
