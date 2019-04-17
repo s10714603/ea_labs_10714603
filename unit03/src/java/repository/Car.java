@@ -22,6 +22,7 @@ public class Car {
     private String name;
     private String manufacturer;
     private String img_uri;
+    private String video_uri;
 
     public String getName() {
         return name;
@@ -53,6 +54,14 @@ public class Car {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+    
+    public String getVideo_uri() {
+        return video_uri;
+    }
+
+    public void setVideo_uri(String video_uri) {
+        this.video_uri = video_uri;
     }
 
     

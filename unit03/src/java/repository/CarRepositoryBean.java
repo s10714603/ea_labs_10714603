@@ -37,11 +37,13 @@ public class CarRepositoryBean {
         newCar.setName("R8-Coupé");
         newCar.setManufacturer("Audi");
         newCar.setImg_uri("Audi/audi");
+        newCar.setVideo_uri("resources/video/Audi/audi");
         this.create(newCar);
         Car newCar2 = new Car();
         newCar2.setName("Roadster");
         newCar2.setManufacturer("Tesla");
         newCar2.setImg_uri("Tesla/tesla");
+        newCar2.setVideo_uri("resources/video/Tesla/tesla");
         this.create(newCar2);
     }
     

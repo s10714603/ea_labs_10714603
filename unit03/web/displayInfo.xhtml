@@ -7,7 +7,7 @@
         <title>#{carSelectionBean.carValue.name} - #{carSelectionBean.carValue.manufacturer}</title>
     </h:head>
     <h:body>
-        <h:link outcome="index" > Home </h:link>
+        <h:link outcome="index"> Home </h:link>
         <h:form>
             <p/>
             <i>車子名稱: #{carSelectionBean.carValue.name}</i>
@@ -15,6 +15,9 @@
             <i>車子製造商: #{carSelectionBean.carValue.manufacturer}</i>
             <p/>
             <h:graphicImage width="50%" library="img" name="#{carSelectionBean.carValue.img_uri}.jpg"></h:graphicImage>
+            <video controls="controls">
+                <source src="#{carSelectionBean.carValue.video_uri}.mp4" type="video/mp4"/>
+            </video>
         </h:form>
     </h:body>
 </html>
