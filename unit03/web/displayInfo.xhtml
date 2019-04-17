@@ -1,24 +1,90 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
+<head>
+		<title>#{carSelectionBean.carValue.name}_#{carSelectionBean.carValue.manufacturer}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
 
-    <h:head>
-        <title>#{carSelectionBean.carValue.name} - #{carSelectionBean.carValue.manufacturer}</title>
-    </h:head>
-    <h:body>
-        <h:link outcome="index"> Home </h:link>
-        <h:form>
-            <p/>
-            <i>車子名稱: #{carSelectionBean.carValue.name}</i>
-            <p/>
-            <i>車子製造商: #{carSelectionBean.carValue.manufacturer}</i>
-            <p/>
-            <h:graphicImage width="50%" library="img" name="#{carSelectionBean.carValue.img_uri}.jpg"></h:graphicImage>
-            <video controls="controls">
-                <source src="#{carSelectionBean.carValue.video_uri}.mp4" type="video/mp4"/>
-            </video>
-        </h:form>
-    </h:body>
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="#">ea_labs <span>Unit03</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.xhtml">Home</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="One" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<p>#{carSelectionBean.carValue.manufacturer}</p>
+						<h2>#{carSelectionBean.carValue.name}</h2>
+					</header>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="content">
+                                                    <h:form>
+							<header class="align-center">
+                                                            <h:link outcome="index"> Home </h:link>
+							</header>
+                                                        <div class="align-center">
+							<p/>
+                                                        <i>車子名稱: #{carSelectionBean.carValue.name}</i>
+                                                        <p/>
+                                                        <i>車子製造商: #{carSelectionBean.carValue.manufacturer}</i>
+                                                        <p/>
+                                                        <h:graphicImage width="100%" library="img" name="#{carSelectionBean.carValue.img_uri}.jpg"></h:graphicImage>
+                                                        <video width="1024" height="768" controls="controls">
+                                                            <source src="#{carSelectionBean.carValue.video_uri}.mp4" type="video/mp4"/>
+                                                        </video>
+                                                        </div>
+                                                    </h:form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					Untitled.
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
-
