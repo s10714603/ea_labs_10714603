@@ -9,130 +9,130 @@ and open the template in the editor.
       xmlns:h="http://xmlns.jcp.org/jsf/html" 
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
-	<head>
-		<title>Unit 03 Assignment</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />   
-	</head>
-	<body>
+    <head>
+        <title>Unit 03 Assignment</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />   
+    </head>
+    <body>
 
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="logo"><a href="#">ea_labs <span>Unit03</span></a></div>
-                                <!-- <div class="logo"><a href="index.xhtml">ea_labs <span>Unit05</span></a></div> -->
-				<a href="#menu">Menu</a>
-			</header>
+        <!-- Header -->
+        <header id="header" class="alt">
+            <div class="logo"><a href="#">ea_labs <span>Unit03</span></a></div>
+            <!-- <div class="logo"><a href="index.xhtml">ea_labs <span>Unit05</span></a></div> -->
+            <a href="#menu">Menu</a>
+        </header>
 
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="#">Home</a></li>
-				</ul>
-			</nav>
+        <!-- Nav -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
 
-		<!-- Banner -->
-			<section class="banner full">
-				<article>
-					<img src="resources/img/Audi/audi.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>Audi</p>
-							<h2>R8-Coupé</h2>
-						</header>
-					</div>
-				</article>
-				<article>
-					<img src="resources/img/Tesla/tesla.jpg" alt="" />
-					<div class="inner">
-						<header>
-							<p>Tesla</p>
-							<h2>Roadster</h2>
-						</header>
-					</div>
-				</article>
-			</section>
+        <!-- Banner -->
+        <section class="banner full">
+            <article>
+                <img src="resources/img/Audi/audi.jpg" alt="" />
+                <div class="inner">
+                    <header>
+                        <p>Audi</p>
+                        <h2>R8-Coupé</h2>
+                    </header>
+                </div>
+            </article>
+            <article>
+                <img src="resources/img/Tesla/tesla.jpg" alt="" />
+                <div class="inner">
+                    <header>
+                        <p>Tesla</p>
+                        <h2>Roadster</h2>
+                    </header>
+                </div>
+            </article>
+        </section>
 
-		<!-- One -->
-			<section id="one" class="wrapper style2">
-				<div class="inner">
-                                    <div style="text-align:center;">
-                                        <h:form>
-                                        <p>請選擇車型</p>
-                                        <h:selectOneMenu  value="#{carSelectionBean.carID}">
-                                            <f:selectItems 
-                                                value="#{carSelectionBean.carItems}"
-                                                var="Car"
-                                                itemValue="#{Car.id}"
-                                                itemLabel="#{Car.name} #{Car.manufacturer}"
-                                            />
-                                        </h:selectOneMenu>
-                                        <p/>
-                                        <h:commandButton type="submit" value="Display" action="#{carSelectionBean.dispalyInfo()}"/>
-                                        </h:form>
-					<div class="grid-style">
-						<div>
-							<div class="box">
-								<div class="content">
-									<header class="align-center">
-                                                                                <p>Audi</p>
-                                                                                <h2>R8-Coupé</h2>
-									</header>
-                                                                    <p>
-                                                                        The car is exclusively designed, developed, and manufactured by Audi AG's private subsidiary 
-                                                                        company manufacturing high performance automotive parts, Audi Sport GmbH (formerly quattro GmbH), 
-                                                                        and is based on the Lamborghini Gallardo and presently the Huracán platform. The fundamental 
-                                                                        construction of the R8 is based on the Audi Space Frame, and uses an aluminium monocoque which is 
-                                                                        built using space frame principles. The car is built by Audi Sport GmbH in a newly renovated factory 
-                                                                        at Audi's 'aluminium site' at Neckarsulm in Germany.
-                                                                    </p>
-								</div>
-							</div>
-						</div>
+        <!-- One -->
+        <section id="one" class="wrapper style2">
+            <div class="inner">
+                <div style="text-align:center;">
+                    <h:form>
+                        <p>請選擇車型</p>
+                        <h:selectOneMenu  value="#{carSelectionBean.carID}">
+                            <f:selectItems 
+                                value="#{carSelectionBean.carItems}"
+                                var="Car"
+                                itemValue="#{Car.id}"
+                                itemLabel="#{Car.name} #{Car.manufacturer}"
+                                />
+                        </h:selectOneMenu>
+                        <p/>
+                        <h:commandButton type="submit" value="Display" action="#{carSelectionBean.dispalyInfo()}"/>
+                    </h:form>
+                    <div class="grid-style">
+                        <div>
+                            <div class="box">
+                                <div class="content">
+                                    <header class="align-center">
+                                        <p>Audi</p>
+                                        <h2>R8-Coupé</h2>
+                                    </header>
+                                    <p>
+                                        The car is exclusively designed, developed, and manufactured by Audi AG's private subsidiary 
+                                        company manufacturing high performance automotive parts, Audi Sport GmbH (formerly quattro GmbH), 
+                                        and is based on the Lamborghini Gallardo and presently the Huracán platform. The fundamental 
+                                        construction of the R8 is based on the Audi Space Frame, and uses an aluminium monocoque which is 
+                                        built using space frame principles. The car is built by Audi Sport GmbH in a newly renovated factory 
+                                        at Audi's 'aluminium site' at Neckarsulm in Germany.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
-						<div>
-							<div class="box">
-								<div class="content">
-									<header class="align-center">
-										<p>Tesla</p>
-                                                                                <h2>Roadster</h2>
-									</header>
-                                                                    <p>
-                                                                        The Tesla Roadster is an upcoming all-electric battery-powered four-seater sports car made by Tesla, 
-                                                                        Inc. Tesla has said it will be capable of 0 to 60 mph (0 to 97 km/h) in 1.9 seconds, quicker than any 
-                                                                        street legal production car to date at its announcement in November 2017. The Roadster is the successor 
-                                                                        to Tesla's first production car, which was the 2008 Roadster. The roadster is expected to be the quickest car ever made.
-                                                                        Tesla indicates that Roadster sales will begin in 2020, although not before the Tesla Model Y goes on sale, 
-                                                                        including a model with ~10 cold gas thrusters.
-                                                                    </p>
-								</div>
-							</div>
-						</div>
-					</div>
-                                    </div>    
-				</div>
-			</section>
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-				<div class="copyright">
-					Untitled.
-				</div>
-			</footer>
+                        <div>
+                            <div class="box">
+                                <div class="content">
+                                    <header class="align-center">
+                                        <p>Tesla</p>
+                                        <h2>Roadster</h2>
+                                    </header>
+                                    <p>
+                                        The Tesla Roadster is an upcoming all-electric battery-powered four-seater sports car made by Tesla, 
+                                        Inc. Tesla has said it will be capable of 0 to 60 mph (0 to 97 km/h) in 1.9 seconds, quicker than any 
+                                        street legal production car to date at its announcement in November 2017. The Roadster is the successor 
+                                        to Tesla's first production car, which was the 2008 Roadster. The roadster is expected to be the quickest car ever made.
+                                        Tesla indicates that Roadster sales will begin in 2020, although not before the Tesla Model Y goes on sale, 
+                                        including a model with ~10 cold gas thrusters.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="container">
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                Untitled.
+            </div>
+        </footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/skel.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
 
-	</body>
+    </body>
 </html>

@@ -25,9 +25,6 @@ public class unitFive implements Serializable {
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
    
-   private Integer pageNumber = 0;
-   
-   
    public String submit() { 
        
       if(pageNumber == 0) {          
@@ -35,11 +32,11 @@ public class unitFive implements Serializable {
       }
       else switch (pageNumber) {
            case 1:
-               return "page1?faces-redirect=true";
+               return "home1";
            case 2:
-               return "page2?faces-redirect=true";
+               return "home2";
            case 3:
-               return "page3?faces-redirect=true";
+               return "home3";
            default:
                return "index?faces-redirect=true";    
        }    
@@ -50,11 +47,12 @@ public class unitFive implements Serializable {
        return "index?faces-redirect=true"; 
    }
    
-   public Integer getpageNumber(){
+   private int pageNumber = 0;
+   public int getPageNumber(){
        return pageNumber;
    }
    
-   public void setpageNumber(Integer pageNumber){
+   public void setPageNumber(int pageNumber){
        this.pageNumber = pageNumber;
    }
 }

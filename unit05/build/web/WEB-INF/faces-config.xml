@@ -19,7 +19,7 @@
                    1) the corresponding form-action outcome or 
                    2) the action attribute of a UIComponent with navigation support 
                    when the from-action is omited  -->
-                 <from-outcome>page1</from-outcome>
+                 <from-outcome>home1</from-outcome>
                  
                  <!-- Conditional Navigation  -->
                  <if></if>
@@ -32,7 +32,7 @@
          <navigation-case>
                  <!-- Navigation Case Definition -->
                  <from-action>#{unitFive.pageNumber}</from-action>
-                 <from-outcome>page2</from-outcome>
+                 <from-outcome>home2</from-outcome>
                  <if></if>
                  <to-view-id>page2.xhtml</to-view-id>
          </navigation-case>
@@ -40,7 +40,7 @@
          <navigation-case>
                  <!-- Navigation Case Definition -->
                  <from-action>#{unitFive.pageNumber}</from-action>
-                 <from-outcome>page3</from-outcome>
+                 <from-outcome>home3</from-outcome>
                  <if></if>
                  <to-view-id>page3.xhtml</to-view-id>
          </navigation-case>

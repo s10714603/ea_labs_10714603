@@ -5,21 +5,20 @@
  */
 package uibeans;
 
+import javax.inject.Named;
+import javax.enterprise.context.RequestScoped;
 import java.io.Serializable;
 import java.util.List;
 import javax.ejb.EJB;
-import javax.inject.Named;
-import javax.enterprise.context.SessionScoped;
 import repository.CarRepositoryBean;
 import repository.Car;
 
-
 /**
  *
- * @author hychen39@gm.cyut.edu.tw
+ * @author Chipan
  */
 @Named(value = "carSelectionBean")
-@SessionScoped
+@RequestScoped
 public class CarSelectionBean implements Serializable{
 
     
@@ -31,27 +30,42 @@ public class CarSelectionBean implements Serializable{
      * Action method to redirect to displayInfo facelets page.
      * @return target page name
      */
+    private int carID;
+    private float price;
     
-    private Integer carID;
-    
-    public String dispalyInfo(){
-        return "displayInfo?faces-redirect=true";
+    public String index(){
+        return "home";
     }
     
-    public Integer getCarID(){
+    public String submit(){
+        repository.query(carID).setPrice(price);
+        return "home";
+    }
+    
+    public int getCarID(){
         return this.carID;
+       
     }
     
-    public void setCarID(Integer carID){
+    public void setCarID(int carID){
         this.carID = carID;
+        setPrice(repository.query(carID).getPrice());
+    }
+    
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
     }
     
     
-    public List<Car> getcarItems(){
+    public List<Car> getCarItems(){
         return repository.findAll();
     }
     
-    public Car getcarValue(){
+    public Car getCarValue(){
         return repository.query(this.carID);
     }
 }

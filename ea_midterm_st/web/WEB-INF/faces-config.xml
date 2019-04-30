@@ -4,7 +4,7 @@
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
     <navigation-rule>
          <!-- Source Page-->
-         <from-view-id>index.xhtml</from-view-id>
+         <from-view-id>editCarInfo.xhtml</from-view-id>
          
          <!-- first navigation case -->
          <navigation-case>
@@ -13,36 +13,29 @@
                    the action attribute of the UIComponent that triggers the action 
                    will be considered.  -->
                  
-                 <from-action>#{unitFive.pageNumber}</from-action>
+                 <from-action>#{carSelectionBean.index()}</from-action>
                  
                  <!-- The outcome value to be compared with 
                    1) the corresponding form-action outcome or 
                    2) the action attribute of a UIComponent with navigation support 
                    when the from-action is omited  -->
-                 <from-outcome>home1</from-outcome>
+                 <from-outcome>home</from-outcome>
                  
                  <!-- Conditional Navigation  -->
                  <if></if>
                  
                  <!-- The target page -->
-                 <to-view-id>page1.xhtml</to-view-id>
-         </navigation-case>
-     
-         <!-- Navigate to different pages with other navigation cases -->
-         <navigation-case>
-                 <!-- Navigation Case Definition -->
-                 <from-action>#{unitFive.pageNumber}</from-action>
-                 <from-outcome>home2</from-outcome>
-                 <if></if>
-                 <to-view-id>page2.xhtml</to-view-id>
+                 <to-view-id>index.xhtml</to-view-id>
+                 <redirect/>
          </navigation-case>
          
          <navigation-case>
-                 <!-- Navigation Case Definition -->
-                 <from-action>#{unitFive.pageNumber}</from-action>
-                 <from-outcome>home3</from-outcome>
+                 <from-action>#{carSelectionBean.submit()}</from-action>
+                 <from-outcome>home</from-outcome>
                  <if></if>
-                 <to-view-id>page3.xhtml</to-view-id>
+                 <to-view-id>index.xhtml</to-view-id>
+                 <redirect/>
          </navigation-case>
+         
     </navigation-rule>
 </faces-config>
